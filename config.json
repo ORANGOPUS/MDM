@@ -1,0 +1,81 @@
+{
+  "model_type": "mycel_disposition_model",
+  "architecture": "mlp",
+  "hidden": 32,
+  "n_parameters": 1705,
+  "inputs": {
+    "features": [
+      "density",
+      "luminosity",
+      "activity",
+      "d_density",
+      "d_luminosity",
+      "d_activity",
+      "tempo",
+      "valence",
+      "verbosity",
+      "engagement"
+    ],
+    "n_features": 10
+  },
+  "outputs": {
+    "mood": {
+      "labels": [
+        "withdrawn",
+        "charged",
+        "luminous",
+        "dense",
+        "restless",
+        "settled"
+      ],
+      "n": 6
+    },
+    "tone": {
+      "axes": [
+        "arousal",
+        "brightness",
+        "openness"
+      ],
+      "n": 3,
+      "range": [
+        -1,
+        1
+      ]
+    }
+  },
+  "tone_anchors": {
+    "withdrawn": [
+      -0.6000000238418579,
+      -0.6000000238418579,
+      -0.699999988079071
+    ],
+    "charged": [
+      0.800000011920929,
+      0.20000000298023224,
+      0.4000000059604645
+    ],
+    "luminous": [
+      -0.20000000298023224,
+      0.800000011920929,
+      0.5
+    ],
+    "dense": [
+      0.10000000149011612,
+      -0.6000000238418579,
+      -0.20000000298023224
+    ],
+    "restless": [
+      0.699999988079071,
+      0.6000000238418579,
+      0.20000000298023224
+    ],
+    "settled": [
+      -0.30000001192092896,
+      0.10000000149011612,
+      0.10000000149011612
+    ]
+  },
+  "val_mood_accuracy": 0.9323,
+  "val_tone_mae": 0.0154,
+  "license": "apache-2.0"
+}

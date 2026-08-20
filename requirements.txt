@@ -1,0 +1,8 @@
+torch>=2.2
+numpy>=1.24
+safetensors>=0.4
+# for ONNX export (optional):
+onnx>=1.16
+onnxscript>=0.1
+# for verifying ONNX inference (optional):
+onnxruntime>=1.17
